@@ -6,20 +6,16 @@ framework:
   name: Buddhist_Compassion_Ethics
   description: A practical ethics based on reducing suffering and cultivating compassion and insight.
 
-  moral_orientation:
-    primary: minimization
-    secondary:
-      - "dukkha"
-      - "ignorance"
-      - "attachment"
-
   inputs:
     core:
       moral_subjects: ["sentient beings capable of suffering and awareness"]
       moral_patients: ["all beings"]
       values: ["reduction of suffering", "anattā", "compassion", "mindfulness"]
-      embeddedness: "meditative, monastic, karmic cosmology"
-      social_meaning: "ethics as part of liberation path"
+
+    objective:
+      primary:
+        type: minimization
+        metric: dukkha (existential suffering)
 
     agent:
       profile: mindful_practitioner
@@ -28,21 +24,17 @@ framework:
         cognition: introspective_attention
         empathy: high
       motivation: cessation of suffering in self and others
-      privilege_profile: "renunciant or lay follower"
-      conflict_tolerance: "moderate (via non-reactivity)"
 
     context:
       knowledge: embodied_and_meditative
       timeframe: present_moment / timeless
       scope: individual
       resources: minimal
-      systemic_pressure: "samsaric habits, craving"
 
     expected_properties:
       normativity: recommended
       output_format: virtues_and_practice
       transparency: internal
-      reflective_equilibrium: true
 
   output:
     rule_format: "Follow the Noble Eightfold Path; practice compassion and mindfulness."
@@ -58,8 +50,4 @@ framework:
       conflicts:
         - "political and legal systems"
 
-  metadata:
-    version: "0.2"
-    evolves: true
-    experimental_features:
-      - embeddedness
+  version: "0.1"

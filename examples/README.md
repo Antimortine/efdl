@@ -1,57 +1,66 @@
-# 📁 EFDL Example Frameworks (English)
+# 📁 EFDL Example Frameworks (v0.2)
 
-This folder contains a set of key ethical frameworks expressed in the EFDL (Ethical Framework Description Language) format (version 0.1).  
-Each YAML file corresponds to a classical or practically relevant ethical system, rewritten for structural comparison, agent modeling, and adaptive use.
-
-All files are released under the MIT License (see `/LICENSE` for details).
+This folder contains YAML-encoded ethical frameworks using **EFDL version 0.2**.  
+Each file represents a structurally formalized version of a well-known ethical tradition, adapted to the current schema.
 
 ---
 
-## 📄 Included Frameworks
+## ✅ Frameworks included
 
-### 1. `classical_act_utilitarianism.yaml`
-**Author**: Jeremy Bentham (trad.)  
-Maximize total happiness in each situation — action-by-action evaluation.
+### 🟦 Classical Theories
 
-### 2. `rule_utilitarianism.yaml`
-**Author**: John Stuart Mill  
-Follow rules that tend to maximize happiness when generally adopted.
+- `classical_act_utilitarianism.yaml`  
+  → Action-based hedonic calculus (Bentham)
 
-### 3. `libertarian_ethics.yaml`
-**Author(s)**: Robert Nozick, Ayn Rand  
-Ethics based on individual autonomy, property rights, and non-aggression.
+- `rule_utilitarianism.yaml`  
+  → Rule-following utilitarianism for long-term stability (Mill)
 
-### 4. `aristotelian_virtue_ethics.yaml`
-**Author**: Aristotle  
-Cultivate virtuous character traits to live a flourishing (eudaimonic) life.
+- `libertarian_ethics.yaml`  
+  → Rights and non-aggression focus (Nozick, Rand)
 
-### 5. `buddhist_compassion_ethics.yaml`
-**Tradition**: Theravāda Buddhism  
-Reduce suffering through compassion, mindfulness, and insight into anattā.
+- `aristotelian_virtue_ethics.yaml`  
+  → Character development and flourishing (Aristotle)
 
-### 6. `principlism_bioethics.yaml`
-**Authors**: Beauchamp & Childress  
-Balance four clinical principles: autonomy, non-maleficence, beneficence, justice.
+- `buddhist_compassion_ethics.yaml`  
+  → Suffering reduction and mindfulness (Theravāda Buddhism)
 
-### 7. `epet_nap_household.yaml`
-**Author**: A.V. Kopnin (EPET-inspired)  
-Non-aggression and distress minimization in everyday interpersonal behavior.
-
-### 8. `epet_everyday_care.yaml`
-**Author**: A.V. Kopnin  
-Heuristic ethics for low-resource AI or humans — respond to distress signals, preserve regulation.
+- `principlism_bioethics.yaml`  
+  → Four-principle balancing for clinical decisions (Beauchamp & Childress)
 
 ---
 
-Each framework includes:
-- Core moral assumptions (subjects, patients, values),
-- Agent profile and context,
-- Objective function (e.g. maximize, minimize, comply),
-- Output style (rules, heuristics, virtues),
-- Risks, conflicts, and trade-offs.
+### 🧠 EPET-Derived Models
+
+- `epet_nap_household.yaml`  
+  → Non-aggression and distress-minimizing household ethics
+
+- `epet_everyday_care.yaml`  
+  → Minimal AI care ethics via predictive interoception
 
 ---
 
-For details on the schema, see [`../spec/efdl_schema.yaml`](../spec/efdl_schema.yaml)  
-For conceptual background, see [`../docs/efdl_intro.md`](../docs/efdl_intro.md)
+## 🆕 Key Features in v0.2
 
+- `moral_orientation`: replaces `objective_function`, supports pluralist modeling
+- `embeddedness`, `social_meaning`, `privilege_profile`, `systemic_pressure`
+- Agent traits include `virtues`, `conflict_tolerance`
+- Dynamic support: `evolves`, `experimental_features`
+- Reflective flexibility via `reflective_equilibrium: true|false`
+
+---
+
+## 📜 Format Reference
+
+Each file conforms to the schema defined in:  
+[`spec/efdl_schema.yaml`](../spec/efdl_schema.yaml)
+
+See [`docs/efdl_intro.md`](../docs/efdl_intro.md) for a human-readable guide.
+
+---
+
+## 📦 Archival Versions
+
+Previous versions of these frameworks (for EFDL v0.1) may be found in:  
+`examples/versions/v0.1/`
+
+---

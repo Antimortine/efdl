@@ -1,109 +1,83 @@
-# 📘 Introduction to EFDL: Ethical Framework Description Language
+# 📘 Introduction to EFDL: Ethical Framework Description Language (v0.2)
 
 ---
 
 ## 🧠 What is EFDL?
 
-**EFDL** (Ethical Framework Description Language) is a formal language for describing ethical frameworks in a structured, operational, and agent-aware way.
+**EFDL** (Ethical Framework Description Language) is a formal language for describing ethical frameworks in a structured, adaptive, and agent-aware way.
 
-It is not itself an ethical theory.  
-Rather, it's a **meta-framework** — a representational infrastructure that allows you to:
+EFDL is not a normative theory itself. Rather, it's a **meta-framework** — a system for modeling, comparing, and translating ethical approaches across contexts, agents, and disciplines.
 
-- Formalize normative systems (e.g., utilitarianism, virtue ethics, libertarianism),
-- Compare them across dimensions like cognitive demand, stability, and applicability,
-- Adapt and transform them for specific agents (e.g., humans, AI systems, social institutions).
+Version 0.2 of EFDL incorporates community critique and adds flexibility for pluralist, dynamic, and culturally embedded ethics.
 
 ---
 
-## 🎯 Why was EFDL created?
+## 📦 EFDL Schema Structure (v0.2)
 
-Contemporary moral philosophy is rich in content but poor in structural interoperability.  
-We often ask:
+Each ethical framework is expressed as a YAML structure with the following core blocks:
 
-> "Can we compare utilitarianism and Buddhist ethics?"  
-> "Why do moral dilemmas feel unsolvable?"  
-> "How can an AI respect 'autonomy' in bounded environments?"  
-> "Is a given ethical theory realistic under human cognitive constraints?"
+### 🔹 `moral_orientation`
 
-**EFDL** provides tools to answer these questions — not by resolving them metaphysically, but by **mapping and analyzing the underlying assumptions** of ethical systems.
+* Replaces "objective\_function"
+* Describes what the framework is oriented toward (e.g., maximization, development, balance, compliance)
 
----
+### 🔹 `inputs`
 
-## 🧩 Core Concepts of EFDL
+**Subsections:**
 
-Each ethical framework in EFDL is described as a structured YAML object with the following key sections:
+* `core`: moral subjects, patients, values
 
-### 1. **Core Assumptions**
-- `moral_subjects`: Who is capable of moral agency?
-- `moral_patients`: Who deserves moral consideration?
-- `values`: What is considered intrinsically important?
+  * Supports fields for `embeddedness`, `social_meaning`, and relational ontology
+* `agent`: profile, motivation, cognition, empathy, privilege, conflict\_tolerance
 
-### 2. **Objective Function**
-- `goal_type`: Maximize, minimize, follow-rule, etc.
-- `metric`: The evaluative criterion (e.g., total happiness, fairness, autonomy)
+  * May also specify cultivated dispositions or virtues (e.g. courage, honesty)
+* `context`: knowledge, timeframe, scope, systemic pressure
+* `expected_properties`: normativity, output format, transparency, reflective equilibrium
 
-### 3. **Agent Profile**
-- Bounded or ideal agent?
-- Cognitive and emotional resources?
-- Motivational structure (altruistic, compliance, hybrid)?
+### 🔹 `output`
 
-### 4. **Context**
-- Temporal scale, epistemic access, available resources.
-- Individual, group, institutional, or global scope?
+* Format and type of recommendations (rules, heuristics, decisions)
+* Normativity, cost, risks, conflicts
 
-### 5. **Output Format**
-- Rules, heuristics, virtues, decision trees?
-- Transparency and normative force?
+### 🔹 `metadata`
 
-### 6. **Evaluation and Risks**
-- Estimated goal success,
-- Known compromises and ethical trade-offs,
-- Conflict zones with other frameworks.
-
-📄 Example frameworks are available in the [examples/](../examples/) directory.
+* Version tracking
+* `evolves`: whether the framework assumes developmental change
+* `experimental_features`: e.g., EFDL+ modules like `ethical_distance`, `compliance_function`
 
 ---
 
-## 🔬 What is EFDL+?
+## ✳️ What is EFDL+?
 
-**EFDL+** extends the descriptive format into a **meta-analytical toolset**. It introduces:
+**EFDL+** is an extension layer for meta-analysis and cross-framework comparison. It introduces tools such as:
 
-- **Ethical configuration space**: a multidimensional space where each framework is a point;
-- **Stability, applicability, ethical distance**: metrics for comparing frameworks;
-- **Friction**: mismatch between framework prescriptions and agent motivation;
-- **Analytic continuation**: ability to generalize a framework to new domains;
-- **Singularities**: breakdown points where frameworks fail.
+* `ethical_distance(f1, f2)` — distance between two frameworks (multiple metric models)
+* `friction(f, agent)` — measure of motivational or practical resistance
+* `compliance_function(f, agent, context) → [0..1]` — probabilistic compliance model
+* `analytic_continuation(f)` and `singularity(f)` — advanced constructs for identifying breakdowns and extension limits
 
-This allows EFDL+ to be used for:
-
-- Resolving moral dilemmas (e.g., trolley problems),
-- Reframing metaethical disputes (e.g., realism vs relativism),
-- Designing morally-aware agents,
-- Modeling pluralistic ethical environments.
+All EFDL+ features are marked as **experimental** and require explicit opt-in.
 
 ---
 
-## 🛠 Use Cases
+## 🛠 Example Use Cases
 
-- **Philosophy**: Clarify and compare theories without relying solely on intuitions.
-- **AI Ethics**: Embed ethics in agent architectures with bounded rationality.
-- **Institutional Design**: Analyze policy-level ethics in constrained environments.
-- **Descriptive Ethics**: Model real-world moral norms and cultural logic.
-
----
-
-## 📚 Learn More
-
-- See the [examples/](../examples/) directory for real-world EFDL frameworks.
-- Explore the [paper/](../paper/) for the theoretical background.
-- Check the [spec/](../spec/) folder for schema definitions and formatting guides.
+* Comparing utilitarianism, virtue ethics, and deontology in a common YAML format
+* Visualizing tensions in practical ethics (e.g. AI care, triage, alignment dilemmas)
+* Representing plural agents with conflicting motivations (e.g. hybrid frameworks)
+* Supporting educational and AI governance analysis
 
 ---
 
-## 🧾 Citation and License
+## 🔍 Learn More
 
-All contents of this repository are released under the MIT License.
-Use freely, adapt as needed, attribution is appreciated but not required.
+* See the `examples/` folder for working YAML files (version 0.2)
+* Refer to `spec/efdl_schema_v02.yaml` for formal definitions
+* Review `Design_Reactions.md` and `Critique_Summary.md` for motivation
 
 ---
 
+## ⚖️ License
+
+EFDL is released under the MIT License.
+Version 0.2 reflects structural refinements and conceptual evolution based on peer critique and field feedback.

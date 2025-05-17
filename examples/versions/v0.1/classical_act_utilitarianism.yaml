@@ -6,19 +6,16 @@ framework:
   name: Classical_Act_Utilitarianism
   description: An ethical framework where actions are evaluated by the total happiness they produce in each situation.
 
-  moral_orientation:
-    primary: maximization
-    secondary:
-      - "total happiness"
-      - "reduction of suffering"
-
   inputs:
     core:
       moral_subjects: ["any sentient being"]
       moral_patients: ["any sentient being"]
       values: ["happiness is good", "suffering is bad"]
-      embeddedness: "minimal"
-      social_meaning: "hedonic impact per agent"
+
+    objective:
+      primary:
+        type: maximization
+        metric: total happiness minus suffering
 
     agent:
       profile: ideal_rational_observer
@@ -27,21 +24,17 @@ framework:
         cognition: advanced
         empathy: basic
       motivation: maximize total good
-      privilege_profile: "neutral observer"
-      conflict_tolerance: "low"
 
     context:
       knowledge: full
       timeframe: long_term
       scope: individual
       resources: unlimited
-      systemic_pressure: "none"
 
     expected_properties:
       normativity: mandatory
       output_format: choice_rule
       transparency: full
-      reflective_equilibrium: false
 
   output:
     rule_format: "Choose the action that yields the highest balance of pleasure over pain."
@@ -59,9 +52,4 @@ framework:
         - "deontology"
         - "individual rights"
 
-  metadata:
-    version: "0.2"
-    evolves: false
-    experimental_features:
-      - ethical_distance
-      - compliance_function
+  version: "0.1"

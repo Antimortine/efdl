@@ -4,21 +4,18 @@
 
 framework:
   name: Rule_Utilitarianism
-  description: Follow rules that, if generally followed, lead to the greatest long-term well-being.
-
-  moral_orientation:
-    primary: maximization
-    secondary:
-      - "general happiness"
-      - "stable cooperation"
+  description: Choose rules that, if generally followed, lead to the greatest long-term well-being.
 
   inputs:
     core:
       moral_subjects: ["sentient beings"]
       moral_patients: ["sentient beings"]
       values: ["happiness", "social order"]
-      embeddedness: "moderate"
-      social_meaning: "rules as coordination tools"
+
+    objective:
+      primary:
+        type: maximization
+        metric: stable general welfare via good rules
 
     agent:
       profile: bounded_rational_agent
@@ -27,21 +24,17 @@ framework:
         cognition: moderate
         empathy: basic
       motivation: follow rational rules
-      privilege_profile: "citizen in liberal society"
-      conflict_tolerance: "moderate"
 
     context:
       knowledge: partial
       timeframe: long_term
       scope: institutional
       resources: medium
-      systemic_pressure: "moderate (legal, cultural)"
 
     expected_properties:
       normativity: recommended
       output_format: rule_set
       transparency: partial
-      reflective_equilibrium: true
 
   output:
     rule_format: "Follow rules that have proven to benefit overall happiness."
@@ -58,8 +51,4 @@ framework:
         - "virtue ethics"
         - "situational ethics"
 
-  metadata:
-    version: "0.2"
-    evolves: true
-    experimental_features:
-      - ethical_distance
+  version: "0.1"

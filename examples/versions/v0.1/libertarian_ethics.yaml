@@ -6,20 +6,16 @@ framework:
   name: Libertarian_Ethics
   description: An ethical system focused on individual liberty, property rights, and non-aggression.
 
-  moral_orientation:
-    primary: principle_compliance
-    secondary:
-      - "non-aggression"
-      - "respect for autonomy"
-      - "property rights"
-
   inputs:
     core:
       moral_subjects: ["rational individual"]
       moral_patients: ["individuals with rights"]
       values: ["autonomy", "property", "non-aggression"]
-      embeddedness: "individual-centric"
-      social_meaning: "freedom as non-interference"
+
+    objective:
+      primary:
+        type: principle_compliance
+        metric: non-violation of rights (Non-Aggression Principle)
 
     agent:
       profile: free_rational_agent
@@ -28,21 +24,17 @@ framework:
         cognition: advanced
         empathy: not_required
       motivation: defend autonomy
-      privilege_profile: "owner / property-holder"
-      conflict_tolerance: "low"
 
     context:
       knowledge: partial
       timeframe: short_and_long_term
       scope: individual_and_legal
       resources: medium
-      systemic_pressure: "moderate (state, regulation)"
 
     expected_properties:
       normativity: mandatory
       output_format: rights_set
       transparency: full
-      reflective_equilibrium: false
 
   output:
     rule_format: "Respect others' freedom; do not violate their boundaries."
@@ -59,8 +51,4 @@ framework:
         - "utilitarianism"
         - "ethics of care"
 
-  metadata:
-    version: "0.2"
-    evolves: false
-    experimental_features:
-      - compliance_function
+  version: "0.1"

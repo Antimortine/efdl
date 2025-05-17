@@ -1,4 +1,4 @@
-# EFDL YAML Schema (v0.2)
+# EFDL YAML Schema (v0.1)
 # Copyright (c) 2025 A.V. Kopnin
 # Released under the MIT License
 # https://opensource.org/licenses/MIT
@@ -7,25 +7,15 @@ framework:
   type: map
   required: true
   mapping:
-
     name:
       type: str
       required: true
+      description: Name of the ethical framework
+
     description:
       type: str
       required: true
-
-    moral_orientation:
-      type: map
-      required: true
-      mapping:
-        primary:
-          type: str
-        secondary:
-          type: seq
-          required: false
-          sequence:
-            - type: str
+      description: Short textual summary of the framework
 
     inputs:
       type: map
@@ -38,19 +28,34 @@ framework:
           mapping:
             moral_subjects:
               type: seq
-              sequence: [ {type: str} ]
+              sequence:
+                - type: str
             moral_patients:
               type: seq
-              sequence: [ {type: str} ]
+              sequence:
+                - type: str
             values:
               type: seq
-              sequence: [ {type: str} ]
-            embeddedness:
-              type: str
+              sequence:
+                - type: str
+
+        objective:
+          type: map
+          required: true
+          mapping:
+            primary:
+              type: map
+              required: true
+              mapping:
+                type:
+                  type: str
+                metric:
+                  type: str
+            secondary:
+              type: seq
               required: false
-            social_meaning:
-              type: str
-              required: false
+              sequence:
+                - type: str
 
         agent:
           type: map
@@ -60,6 +65,7 @@ framework:
               type: str
             resources:
               type: map
+              required: true
               mapping:
                 computation:
                   type: str
@@ -69,12 +75,6 @@ framework:
                   type: str
             motivation:
               type: str
-            privilege_profile:
-              type: str
-              required: false
-            conflict_tolerance:
-              type: str
-              required: false
 
         context:
           type: map
@@ -88,12 +88,10 @@ framework:
               type: str
             resources:
               type: str
-            systemic_pressure:
-              type: str
-              required: false
 
         expected_properties:
           type: map
+          required: true
           mapping:
             normativity:
               type: str
@@ -101,9 +99,6 @@ framework:
               type: str
             transparency:
               type: str
-            reflective_equilibrium:
-              type: bool
-              required: false
 
     output:
       type: map
@@ -123,24 +118,18 @@ framework:
               type: str
             tradeoffs:
               type: seq
-              sequence: [ {type: str} ]
+              sequence:
+                - type: str
             risks:
               type: seq
-              sequence: [ {type: str} ]
+              sequence:
+                - type: str
             conflicts:
               type: seq
               required: false
-              sequence: [ {type: str} ]
+              sequence:
+                - type: str
 
-    metadata:
-      type: map
-      mapping:
-        version:
-          type: str
-        evolves:
-          type: bool
-        experimental_features:
-          type: seq
-          required: false
-          sequence: [ {type: str} ]
-
+    version:
+      type: str
+      required: true

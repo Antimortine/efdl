@@ -6,13 +6,6 @@ framework:
   name: EPET_NAP_Household
   description: A practical ethics for everyday interpersonal behavior based on EPET, minimizing suffering, and the non-aggression principle.
 
-  moral_orientation:
-    primary: minimization
-    secondary:
-      - "interoceptive suffering"
-      - "boundary violation"
-      - "domestic disharmony"
-
   inputs:
     core:
       moral_subjects: ["agents with EPET-compatible self-model", "humans likely to have suffering experience"]
@@ -21,31 +14,34 @@ framework:
         - "interoceptive suffering is bad"
         - "non-aggression is a priority"
         - "boundary violation is harmful, even with good intent"
-      embeddedness: "interpersonal and emotional"
-      social_meaning: "everyday regulation of affective micro-interactions"
+
+    objective:
+      primary:
+        type: minimization
+        metric: interoceptive suffering (including that caused by agent behavior)
+      secondary:
+        - "prevent conflicts"
+        - "support regulatory clarity in relationships"
+        - "do not override others' autonomy"
 
     agent:
       profile: typical_human_in_home_or_social_context
       resources:
         computation: low
         cognition: limited
-        empathy: basic
+        empathy: basic (needed to interpret distress signals)
       motivation: mixed — harmony seeking, conflict avoidance, moral self-regulation
-      privilege_profile: "emotionally central agent"
-      conflict_tolerance: "moderate"
 
     context:
       knowledge: partial
       timeframe: short_term / immediate
       scope: interpersonal / domestic
       resources: medium
-      systemic_pressure: "social expectation, emotional fatigue"
 
     expected_properties:
       normativity: recommended
       output_format: heuristics
       transparency: high
-      reflective_equilibrium: false
 
   output:
     rule_format: |
@@ -73,8 +69,4 @@ framework:
         - "strict deontology"
         - "intrusive virtue ethics"
 
-  metadata:
-    version: "0.2"
-    evolves: true
-    experimental_features:
-      - friction
+  version: "0.1"

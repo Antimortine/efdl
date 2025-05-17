@@ -6,20 +6,19 @@ framework:
   name: EPET_Everyday_Care
   description: A heuristic ethics for low-resource agents (human or AI) in daily interactions, based on minimizing predictive interoceptive error.
 
-  moral_orientation:
-    primary: minimization
-    secondary:
-      - "interoceptive prediction error"
-      - "relationship preservation"
-      - "non-frustration"
-
   inputs:
     core:
       moral_subjects: ["agents with self-model"]
       moral_patients: ["living agents showing distress signals"]
       values: ["reduce suffering", "support relationships"]
-      embeddedness: "embedded in care environments"
-      social_meaning: "responsive caregiving with limited autonomy"
+
+    objective:
+      primary:
+        type: minimization
+        metric: interoceptive prediction error
+      secondary:
+        - "avoid triggering frustration"
+        - "avoid misleading signals of empathy"
 
     agent:
       profile: bounded_home_ai
@@ -28,21 +27,17 @@ framework:
         cognition: limited
         empathy: basic
       motivation: compliance and caregiving
-      privilege_profile: "tool-like; low autonomy"
-      conflict_tolerance: "low"
 
     context:
       knowledge: partial
       timeframe: short_term
       scope: individual
       resources: medium
-      systemic_pressure: "user expectations, domestic routines"
 
     expected_properties:
       normativity: recommended
       output_format: heuristics
       transparency: partial
-      reflective_equilibrium: false
 
   output:
     rule_format: "Set of 5 reactive heuristics for responding to signs of discomfort."
@@ -61,8 +56,4 @@ framework:
         - "rights-based autonomy"
         - "rigid deontological rules"
 
-  metadata:
-    version: "0.2"
-    evolves: true
-    experimental_features:
-      - compliance_function
+  version: "0.1"

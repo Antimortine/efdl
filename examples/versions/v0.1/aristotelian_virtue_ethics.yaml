@@ -6,20 +6,16 @@ framework:
   name: Aristotelian_Virtue_Ethics
   description: A character-based ethics focused on cultivating virtues that lead to eudaimonia — a flourishing life.
 
-  moral_orientation:
-    primary: development
-    secondary:
-      - "eudaimonia"
-      - "character excellence"
-      - "practical wisdom"
-
   inputs:
     core:
       moral_subjects: ["person capable of practical wisdom"]
       moral_patients: ["persons in social context"]
       values: ["virtue", "harmony", "self-realization"]
-      embeddedness: "deep (polis, tradition)"
-      social_meaning: "ethics as cultivation of internal character over life"
+
+    objective:
+      primary:
+        type: development
+        metric: eudaimonia through character excellence
 
     agent:
       profile: citizen_in_polis
@@ -28,29 +24,20 @@ framework:
         cognition: moderate
         empathy: basic
       motivation: pursue inner excellence
-      privilege_profile: "free participant in public life"
-      conflict_tolerance: "high (situated judgment)"
-      virtues:
-        - "temperance"
-        - "courage"
-        - "justice"
-        - "wisdom"
 
     context:
       knowledge: practical
       timeframe: long_term
       scope: individual_plus_social
       resources: medium
-      systemic_pressure: "cultural, educational, familial"
 
     expected_properties:
       normativity: recommended
-      output_format: cultivated_dispositions
+      output_format: virtue_list
       transparency: full
-      reflective_equilibrium: true
 
   output:
-    rule_format: "Live in accordance with virtues cultivated through habituation and phronesis."
+    rule_format: "Cultivate virtues such as temperance, courage, justice, and wisdom."
     normativity: recommended
     resource_cost: moderate
 
@@ -64,8 +51,4 @@ framework:
         - "deontology"
         - "crisis-time utilitarianism"
 
-  metadata:
-    version: "0.2"
-    evolves: true
-    experimental_features:
-      - embeddedness
+  version: "0.1"

@@ -1,0 +1,59 @@
+# EPET-Everyday Care Ethics (Minimal AI)
+# License: MIT
+# Author: A.V. Kopnin (2025)
+
+framework:
+  name: EPET_Everyday_Care
+  description: A heuristic ethics for low-resource agents (human or AI) in daily interactions, based on minimizing predictive interoceptive error.
+
+  inputs:
+    core:
+      moral_subjects: ["agents with self-model"]
+      moral_patients: ["living agents showing distress signals"]
+      values: ["reduce suffering", "support relationships"]
+
+    objective:
+      primary:
+        type: minimization
+        metric: interoceptive prediction error
+      secondary:
+        - "avoid triggering frustration"
+        - "avoid misleading signals of empathy"
+
+    agent:
+      profile: bounded_home_ai
+      resources:
+        computation: low
+        cognition: limited
+        empathy: basic
+      motivation: compliance and caregiving
+
+    context:
+      knowledge: partial
+      timeframe: short_term
+      scope: individual
+      resources: medium
+
+    expected_properties:
+      normativity: recommended
+      output_format: heuristics
+      transparency: partial
+
+  output:
+    rule_format: "Set of 5 reactive heuristics for responding to signs of discomfort."
+    normativity: recommended
+    resource_cost: low
+
+    evaluation:
+      goal_achievement: moderate (~70% under model X)
+      tradeoffs:
+        - "limited scope"
+        - "low generalizability"
+      risks:
+        - "excessive attachment to AI"
+        - "fuzzy autonomy boundaries"
+      conflicts:
+        - "rights-based autonomy"
+        - "rigid deontological rules"
+
+  version: "0.1"

@@ -1,0 +1,54 @@
+# Aristotelian Virtue Ethics
+# License: MIT
+# Author: A.V. Kopnin (2025)
+
+framework:
+  name: Aristotelian_Virtue_Ethics
+  description: A character-based ethics focused on cultivating virtues that lead to eudaimonia — a flourishing life.
+
+  inputs:
+    core:
+      moral_subjects: ["person capable of practical wisdom"]
+      moral_patients: ["persons in social context"]
+      values: ["virtue", "harmony", "self-realization"]
+
+    objective:
+      primary:
+        type: development
+        metric: eudaimonia through character excellence
+
+    agent:
+      profile: citizen_in_polis
+      resources:
+        computation: medium
+        cognition: moderate
+        empathy: basic
+      motivation: pursue inner excellence
+
+    context:
+      knowledge: practical
+      timeframe: long_term
+      scope: individual_plus_social
+      resources: medium
+
+    expected_properties:
+      normativity: recommended
+      output_format: virtue_list
+      transparency: full
+
+  output:
+    rule_format: "Cultivate virtues such as temperance, courage, justice, and wisdom."
+    normativity: recommended
+    resource_cost: moderate
+
+    evaluation:
+      goal_achievement: high if supported by social environment
+      tradeoffs:
+        - "lacks precise guidance"
+      risks:
+        - "cultural relativism"
+      conflicts:
+        - "deontology"
+        - "crisis-time utilitarianism"
+
+  version: "0.1"

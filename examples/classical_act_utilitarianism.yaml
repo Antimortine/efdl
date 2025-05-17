@@ -1,0 +1,55 @@
+# Classical Act Utilitarianism (Bentham)
+# License: MIT
+# Author: A.V. Kopnin (2025)
+
+framework:
+  name: Classical_Act_Utilitarianism
+  description: An ethical framework where actions are evaluated by the total happiness they produce in each situation.
+
+  inputs:
+    core:
+      moral_subjects: ["any sentient being"]
+      moral_patients: ["any sentient being"]
+      values: ["happiness is good", "suffering is bad"]
+
+    objective:
+      primary:
+        type: maximization
+        metric: total happiness minus suffering
+
+    agent:
+      profile: ideal_rational_observer
+      resources:
+        computation: high
+        cognition: advanced
+        empathy: basic
+      motivation: maximize total good
+
+    context:
+      knowledge: full
+      timeframe: long_term
+      scope: individual
+      resources: unlimited
+
+    expected_properties:
+      normativity: mandatory
+      output_format: choice_rule
+      transparency: full
+
+  output:
+    rule_format: "Choose the action that yields the highest balance of pleasure over pain."
+    normativity: mandatory
+    resource_cost: high
+
+    evaluation:
+      goal_achievement: theoretical maximum
+      tradeoffs:
+        - "sacrifice of minority interests"
+        - "requires complete information"
+      risks:
+        - "rationalized harm"
+      conflicts:
+        - "deontology"
+        - "individual rights"
+
+  version: "0.1"

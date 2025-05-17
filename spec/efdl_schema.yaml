@@ -1,0 +1,135 @@
+# EFDL YAML Schema (v0.1)
+# Copyright (c) 2025 A.V. Kopnin
+# Released under the MIT License
+# https://opensource.org/licenses/MIT
+
+framework:
+  type: map
+  required: true
+  mapping:
+    name:
+      type: str
+      required: true
+      description: Name of the ethical framework
+
+    description:
+      type: str
+      required: true
+      description: Short textual summary of the framework
+
+    inputs:
+      type: map
+      required: true
+      mapping:
+
+        core:
+          type: map
+          required: true
+          mapping:
+            moral_subjects:
+              type: seq
+              sequence:
+                - type: str
+            moral_patients:
+              type: seq
+              sequence:
+                - type: str
+            values:
+              type: seq
+              sequence:
+                - type: str
+
+        objective:
+          type: map
+          required: true
+          mapping:
+            primary:
+              type: map
+              required: true
+              mapping:
+                type:
+                  type: str
+                metric:
+                  type: str
+            secondary:
+              type: seq
+              required: false
+              sequence:
+                - type: str
+
+        agent:
+          type: map
+          required: true
+          mapping:
+            profile:
+              type: str
+            resources:
+              type: map
+              required: true
+              mapping:
+                computation:
+                  type: str
+                cognition:
+                  type: str
+                empathy:
+                  type: str
+            motivation:
+              type: str
+
+        context:
+          type: map
+          required: true
+          mapping:
+            knowledge:
+              type: str
+            timeframe:
+              type: str
+            scope:
+              type: str
+            resources:
+              type: str
+
+        expected_properties:
+          type: map
+          required: true
+          mapping:
+            normativity:
+              type: str
+            output_format:
+              type: str
+            transparency:
+              type: str
+
+    output:
+      type: map
+      required: true
+      mapping:
+        rule_format:
+          type: str
+        normativity:
+          type: str
+        resource_cost:
+          type: str
+
+        evaluation:
+          type: map
+          mapping:
+            goal_achievement:
+              type: str
+            tradeoffs:
+              type: seq
+              sequence:
+                - type: str
+            risks:
+              type: seq
+              sequence:
+                - type: str
+            conflicts:
+              type: seq
+              required: false
+              sequence:
+                - type: str
+
+    version:
+      type: str
+      required: true

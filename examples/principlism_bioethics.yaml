@@ -1,0 +1,54 @@
+# Principlism Bioethics (Beauchamp & Childress)
+# License: MIT
+# Author: A.V. Kopnin (2025)
+
+framework:
+  name: Principlism_Bioethics
+  description: A clinical ethics model based on four balanced principles in medical decision-making.
+
+  inputs:
+    core:
+      moral_subjects: ["human with autonomy and vulnerability"]
+      moral_patients: ["patients", "future patients"]
+      values: ["autonomy", "non-maleficence", "beneficence", "justice"]
+
+    objective:
+      primary:
+        type: balanced_application
+        metric: coherence of four principles in context
+
+    agent:
+      profile: healthcare_professional
+      resources:
+        computation: medium
+        cognition: moderate
+        empathy: basic
+      motivation: provide care and follow professional norms
+
+    context:
+      knowledge: partial
+      timeframe: short_and_mid_term
+      scope: individual_and_clinical_team
+      resources: medium
+
+    expected_properties:
+      normativity: recommended
+      output_format: balanced_matrix
+      transparency: high
+
+  output:
+    rule_format: "Weigh the four principles according to the situation."
+    normativity: recommended
+    resource_cost: medium
+
+    evaluation:
+      goal_achievement: high coherence in practical decisions
+      tradeoffs:
+        - "not quantitatively formalized"
+      risks:
+        - "conflicts between principles"
+      conflicts:
+        - "strict deontology"
+        - "pure utilitarianism"
+
+  version: "0.1"

@@ -1,0 +1,53 @@
+# Buddhist Compassion Ethics (Theravāda)
+# License: MIT
+# Author: A.V. Kopnin (2025)
+
+framework:
+  name: Buddhist_Compassion_Ethics
+  description: A practical ethics based on reducing suffering and cultivating compassion and insight.
+
+  inputs:
+    core:
+      moral_subjects: ["sentient beings capable of suffering and awareness"]
+      moral_patients: ["all beings"]
+      values: ["reduction of suffering", "anattā", "compassion", "mindfulness"]
+
+    objective:
+      primary:
+        type: minimization
+        metric: dukkha (existential suffering)
+
+    agent:
+      profile: mindful_practitioner
+      resources:
+        computation: low
+        cognition: introspective_attention
+        empathy: high
+      motivation: cessation of suffering in self and others
+
+    context:
+      knowledge: embodied_and_meditative
+      timeframe: present_moment / timeless
+      scope: individual
+      resources: minimal
+
+    expected_properties:
+      normativity: recommended
+      output_format: virtues_and_practice
+      transparency: internal
+
+  output:
+    rule_format: "Follow the Noble Eightfold Path; practice compassion and mindfulness."
+    normativity: recommended
+    resource_cost: low
+
+    evaluation:
+      goal_achievement: individually high, socially variable
+      tradeoffs:
+        - "withdrawal from normative engagement"
+      risks:
+        - "passivity in external action"
+      conflicts:
+        - "political and legal systems"
+
+  version: "0.1"

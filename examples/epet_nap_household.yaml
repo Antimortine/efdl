@@ -1,0 +1,72 @@
+# EPET-NAP Household Ethics
+# License: MIT
+# Author: A.V. Kopnin (2025)
+
+framework:
+  name: EPET_NAP_Household
+  description: A practical ethics for everyday interpersonal behavior based on EPET, minimizing suffering, and the non-aggression principle.
+
+  inputs:
+    core:
+      moral_subjects: ["agents with EPET-compatible self-model", "humans likely to have suffering experience"]
+      moral_patients: ["beings capable of suffering (per EPET)", "animals showing distress-like behavior"]
+      values:
+        - "interoceptive suffering is bad"
+        - "non-aggression is a priority"
+        - "boundary violation is harmful, even with good intent"
+
+    objective:
+      primary:
+        type: minimization
+        metric: interoceptive suffering (including that caused by agent behavior)
+      secondary:
+        - "prevent conflicts"
+        - "support regulatory clarity in relationships"
+        - "do not override others' autonomy"
+
+    agent:
+      profile: typical_human_in_home_or_social_context
+      resources:
+        computation: low
+        cognition: limited
+        empathy: basic (needed to interpret distress signals)
+      motivation: mixed — harmony seeking, conflict avoidance, moral self-regulation
+
+    context:
+      knowledge: partial
+      timeframe: short_term / immediate
+      scope: interpersonal / domestic
+      resources: medium
+
+    expected_properties:
+      normativity: recommended
+      output_format: heuristics
+      transparency: high
+
+  output:
+    rule_format: |
+      Set of behavioral heuristics:
+        1. If an action might be perceived as aggression — refrain until consent is clear.
+        2. When signs of suffering are present (crying, withdrawal, tension) — shift attention to "what you cause" not "what you want".
+        3. Do not "help" if it violates explicit boundaries.
+        4. Respect vulnerability: suffering agents are more sensitive to prediction errors — reduce interaction load.
+        5. Avoid causing pain even with good intentions — soft presence is better than intrusive correction.
+        6. Reconfigure interactions if persistent negative affect loops emerge.
+        7. Use the "right to silence": not every signal requires response, especially under dysregulation.
+
+    normativity: recommended
+    resource_cost: low
+
+    evaluation:
+      goal_achievement: highly applicable with basic empathy
+      tradeoffs:
+        - "ineffective in institutional conflicts"
+        - "risk of passive permissiveness"
+      risks:
+        - "NAP misused as excuse for inaction"
+        - "difficulty reading atypical suffering expressions"
+      conflicts:
+        - "strict deontology"
+        - "intrusive virtue ethics"
+
+  version: "0.1"

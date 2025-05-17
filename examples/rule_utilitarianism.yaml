@@ -1,0 +1,54 @@
+# Rule Utilitarianism (Mill)
+# License: MIT
+# Author: A.V. Kopnin (2025)
+
+framework:
+  name: Rule_Utilitarianism
+  description: Choose rules that, if generally followed, lead to the greatest long-term well-being.
+
+  inputs:
+    core:
+      moral_subjects: ["sentient beings"]
+      moral_patients: ["sentient beings"]
+      values: ["happiness", "social order"]
+
+    objective:
+      primary:
+        type: maximization
+        metric: stable general welfare via good rules
+
+    agent:
+      profile: bounded_rational_agent
+      resources:
+        computation: medium
+        cognition: moderate
+        empathy: basic
+      motivation: follow rational rules
+
+    context:
+      knowledge: partial
+      timeframe: long_term
+      scope: institutional
+      resources: medium
+
+    expected_properties:
+      normativity: recommended
+      output_format: rule_set
+      transparency: partial
+
+  output:
+    rule_format: "Follow rules that have proven to benefit overall happiness."
+    normativity: recommended
+    resource_cost: medium
+
+    evaluation:
+      goal_achievement: high under stable conditions
+      tradeoffs:
+        - "loss of flexibility"
+      risks:
+        - "rule dogmatism"
+      conflicts:
+        - "virtue ethics"
+        - "situational ethics"
+
+  version: "0.1"
